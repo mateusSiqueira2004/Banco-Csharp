@@ -12,6 +12,7 @@ namespace Banco.view
     internal class MenuView
     {
         public static int confirm = 0;
+        ModelContaCorrente c1 = new(1000,250,654,2,"Mateus",1000000);
 
         public static void MenuConsole()
         {

@@ -1,6 +1,6 @@
 ﻿namespace Banco.Model
 {
-    internal class ModelConta
+    public class ModelConta
     {
         private int numero, agencia, tipo;
         private string titular = string.Empty;
@@ -46,7 +46,7 @@
             this.numero = numero; 
         }
 
-        public bool resulSaque(decimal valor)
+        public virtual bool Sacar(decimal valor)
         {
             if (this.saldo < valor) {
                 Console.WriteLine("Saldo insuficiente");
@@ -60,7 +60,7 @@
             this.setSaldo(this.saldo + valor);
         }
 
-        public void Visualizar()
+        public virtual void Visualizar()
         {
             string tipo = string.Empty;
             
@@ -82,8 +82,7 @@
                 $"\nSua agência da sua conta: {this.agencia}" +
                 $"\nSeu tipo de conta: {tipo}" +
                 $"\nNome registrado na sua conta: {this.titular}" +
-                $"\nSeu saldo: {this.saldo}" +
-                "\n*************************************************\n");
+                $"\nSeu saldo: {this.saldo}");
         }
     }
 }

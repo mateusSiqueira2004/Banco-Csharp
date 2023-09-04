@@ -8,8 +8,10 @@ namespace Banco.Controller
         private static ConsoleKeyInfo consoleKeyInfo;
         public static void controllerConta()
         {
-            ModelConta mdConta = new ModelConta(0, 0, 0, null, 0);
 
+            ModelConta mdConta = new ModelConta(0, 0, 0, null, 10000);
+            ModelContaCorrente c1 = new(2000, mdConta.getNumero(), mdConta.getAgencia(), mdConta.getTipo(), mdConta.getTitular(), mdConta.getSaldo());
+            ModelContaPoupanca c2 = new(300, mdConta.getNumero(), mdConta.getAgencia(), mdConta.getTipo(), mdConta.getTitular(), mdConta.getSaldo());
             switch (MenuView.confirm)
             {
                 case 1:
@@ -43,13 +45,29 @@ namespace Banco.Controller
                     break;
                 case 6:
                     Console.ForegroundColor = ConsoleColor.Blue;
+
+                    Console.WriteLine("Selecione o tipo de Conta: \n1-Corrente\n2-Poupança");
+                    mdConta.setTipo(Convert.ToInt32(Console.ReadLine()));
                     Console.Write("Sacar o Dinheiro da sua conta: ");
+                    switch (mdConta.getTipo())
+                    {
+                        case 1:
+                            c1.Sacar(Convert.ToDecimal(Console.ReadLine()));
+                            c1.Visualizar();
+                            break;
+                        case 2:
+                            mdConta.Sacar(Convert.ToDecimal(Console.ReadLine()));
+                            c2.Visualizar();
+                            break;
+                    }
+
                     Console.ResetColor();
                     KeyPress();
                     break;
                 case 7:
                     Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write("Depositar o Dinheiro da sua conta: ");
+                    Console.Write("Depositar o Dinheiro na sua conta: ");
+                    mdConta.Depositar(Convert.ToDecimal(Console.ReadLine()));
                     Console.ResetColor();
                     KeyPress();
                     break;
@@ -70,7 +88,17 @@ namespace Banco.Controller
                     System.Environment.Exit(0);
                     break;
                 case 0:
-                    mdConta.Visualizar();
+                    Console.ForegroundColor= ConsoleColor.Blue;
+                    Console.WriteLine("Selecione o tipo de Conta: \n1-Corrente\n2-Poupança");
+                    mdConta.setTipo(Convert.ToInt32(Console.ReadLine()));
+                    switch (mdConta.getTipo()) {
+                        case 1: 
+                            c1.Visualizar();
+                            break;
+                        case 2:
+                            c2.Visualizar();
+                            break;
+                    }
                     Console.ResetColor();
                     KeyPress();
                     break;

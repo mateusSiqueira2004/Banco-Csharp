@@ -1,7 +1,7 @@
 ﻿using Banco.view;
 namespace Banco
 {
-    internal class Program
+    internal class Index
     {
         static void Main(string[] args)
         {
