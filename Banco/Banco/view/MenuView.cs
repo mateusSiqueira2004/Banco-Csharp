@@ -9,10 +9,9 @@ using Banco.Controller;
 
 namespace Banco.view
 {
-    internal class MenuView
+    public class MenuView
     {
         public static int confirm = 0;
-        ModelContaCorrente c1 = new(1000,250,654,2,"Mateus",1000000);
 
         public static void MenuConsole()
         {
@@ -41,12 +40,20 @@ namespace Banco.view
                     "\n| 7-Depositar                            |" +
                     "\n| 8-Transferir valores entre Contas      |" +
                     "\n| 9-Sair                                 |" +
-                    "\n| 0-Visualizar Informações               |" +
                     "\n|                                        |" +
                     "\n******************************************");
+            try { 
                 confirm = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
                 ControllerConta.controllerConta();
+            }catch(FormatException)
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Insira valores validos");
+                confirm = 0;
+                ControllerConta.KeyPress();
+            }
         }
     }
 }

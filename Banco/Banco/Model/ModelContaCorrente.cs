@@ -10,7 +10,8 @@ namespace Banco.Model
     {
         private decimal limite;
 
-        public ModelContaCorrente(decimal limite,int numero, int agencia, int tipo, string titular, decimal saldo) : base(numero, agencia, tipo, titular, saldo)
+        public ModelContaCorrente(int numero, int agencia, int tipo, string titular, decimal saldo, decimal limite) 
+            : base(numero, agencia, tipo, titular, saldo)
         {
             this.limite = limite;
         }

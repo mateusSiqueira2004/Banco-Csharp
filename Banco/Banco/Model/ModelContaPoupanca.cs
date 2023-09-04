@@ -27,7 +27,7 @@ namespace Banco.Model
             base.Visualizar();
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(
-                $"\nSeu Limite de Crédito: {this.aniversario}" +
+                $"\nSeu bonus de aniversario: {this.aniversario}" +
                 "\n*************************************************\n");
         }
     }
