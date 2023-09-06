@@ -12,3 +12,17 @@ E:\projetos\Generation\banco\Banco\Banco\obj\Debug\net7.0\refint\Banco.dll
 E:\projetos\Generation\banco\Banco\Banco\obj\Debug\net7.0\Banco.pdb
 E:\projetos\Generation\banco\Banco\Banco\obj\Debug\net7.0\Banco.genruntimeconfig.cache
 E:\projetos\Generation\banco\Banco\Banco\obj\Debug\net7.0\ref\Banco.dll
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\bin\Debug\net7.0\Banco.exe
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\bin\Debug\net7.0\Banco.deps.json
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\bin\Debug\net7.0\Banco.runtimeconfig.json
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\bin\Debug\net7.0\Banco.dll
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\bin\Debug\net7.0\Banco.pdb
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\obj\Debug\net7.0\Banco.GeneratedMSBuildEditorConfig.editorconfig
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\obj\Debug\net7.0\Banco.AssemblyInfoInputs.cache
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\obj\Debug\net7.0\Banco.AssemblyInfo.cs
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\obj\Debug\net7.0\Banco.csproj.CoreCompileInputs.cache
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\obj\Debug\net7.0\Banco.dll
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\obj\Debug\net7.0\refint\Banco.dll
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\obj\Debug\net7.0\Banco.pdb
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\obj\Debug\net7.0\Banco.genruntimeconfig.cache
+D:\projetos\Generation\Banco-Csharp\Banco\Banco\obj\Debug\net7.0\ref\Banco.dll

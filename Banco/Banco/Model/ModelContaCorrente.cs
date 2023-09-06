@@ -25,11 +25,7 @@ namespace Banco.Model
         }
         public override bool Sacar(decimal valor)
         {
-            if (this.limite < valor)
-            {
-                Console.WriteLine("Limite insuficiente");
-                return false;
-            }else if(this.getSaldo() < valor)
+           if(this.getSaldo() + this.getLimite() < valor)
             {
                 Console.WriteLine("Saldo insuficiente");
                 return false;

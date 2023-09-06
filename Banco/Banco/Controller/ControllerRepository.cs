@@ -33,12 +33,12 @@ namespace Banco.Controller
         public void Cadastrar(ModelConta conta)
         {
             listaContas.Add(conta);
-           /* Console.ForegroundColor = ConsoleColor.Yellow;
+           Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(
                 $"\n***************************************************\n" +
                 $"\nA conta {conta.getNumero()} foi criada com sucesso!\n" +
                 $"\n***************************************************\n");
-            Console.ResetColor();*/
+            Console.ResetColor();
         }
 
         public void Deletar(int numero)
@@ -59,7 +59,19 @@ namespace Banco.Controller
 
         public void Depositar(int numero, decimal valor)
         {
-            throw new NotImplementedException();
+            var conta = BuscarNaCollection(numero);
+
+            if (conta is not null)
+            {
+                conta.Depositar(valor);
+                Console.WriteLine($"Deposito na conta {numero} realizado com sucesso!");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"A conta {numero} não foi encontrada!");
+                Console.ResetColor();
+            }
         }
 
         public void ListarContas()
@@ -85,12 +97,41 @@ namespace Banco.Controller
 
         public void Sacar(int numero, decimal valor)
         {
-            throw new NotImplementedException();
+            var conta = BuscarNaCollection(numero);
+
+            if(conta is not null)
+            {
+                if(conta.Sacar(valor) == true)
+                    Console.WriteLine($"Saque na conta {numero} realizado com sucesso!");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"A conta {numero} não foi encontrada!");
+                Console.ResetColor();
+            }
         }
 
         public void Transferir(int numeroOrigem, int numeroDestino, decimal valor)
         {
-            throw new NotImplementedException();
+            var contaOrig = BuscarNaCollection(numeroOrigem);
+            var contaDest = BuscarNaCollection(numeroDestino);
+
+            if (contaOrig is not null && contaDest is not  null)
+            {
+                if (contaOrig.Sacar(valor) == true)
+                {
+                    contaDest.Depositar(valor);
+                    Console.WriteLine($"A transferencia foi realizado com sucesso!");
+                }
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"A conta {numero} não foi encontrada!");
+                Console.ResetColor();
+            }
+
         }
         public int GerarNumero()
         {
