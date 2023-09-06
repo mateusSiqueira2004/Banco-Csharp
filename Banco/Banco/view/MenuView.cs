@@ -4,7 +4,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using Banco.Model;
 using Banco.Controller;
 
 namespace Banco.view
@@ -13,7 +12,7 @@ namespace Banco.view
     {
         public static int confirm = 0;
 
-        public static void MenuConsole()
+        public MenuView()
         {
             
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -45,7 +44,8 @@ namespace Banco.view
             try { 
                 confirm = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
-                ControllerConta.controllerConta();
+                ControllerRepository conta = new();
+                new ControllerConta(conta);
             }catch(FormatException)
             {
                 Console.Clear();
