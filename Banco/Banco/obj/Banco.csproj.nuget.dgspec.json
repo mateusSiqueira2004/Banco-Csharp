@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\projetos\\Generation\\banco\\Banco\\Banco\\Banco.csproj": {}
+    "D:\\projetos\\Generation\\Banco-Csharp\\Banco\\Banco\\Banco.csproj": {}
   },
   "projects": {
-    "E:\\projetos\\Generation\\banco\\Banco\\Banco\\Banco.csproj": {
+    "D:\\projetos\\Generation\\Banco-Csharp\\Banco\\Banco\\Banco.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\projetos\\Generation\\banco\\Banco\\Banco\\Banco.csproj",
+        "projectUniqueName": "D:\\projetos\\Generation\\Banco-Csharp\\Banco\\Banco\\Banco.csproj",
         "projectName": "Banco",
-        "projectPath": "E:\\projetos\\Generation\\banco\\Banco\\Banco\\Banco.csproj",
+        "projectPath": "D:\\projetos\\Generation\\Banco-Csharp\\Banco\\Banco\\Banco.csproj",
         "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
-        "outputPath": "E:\\projetos\\Generation\\banco\\Banco\\Banco\\obj\\",
+        "outputPath": "D:\\projetos\\Generation\\Banco-Csharp\\Banco\\Banco\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
